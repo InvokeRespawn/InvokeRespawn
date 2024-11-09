@@ -1,27 +1,32 @@
 /* Required*/
 /*===================================================================*/
-body
-{
+:root {
+    --primary-color: #89CFF0;
+    --primary-color-shadow: #2794c771;
+}
+
+body {
     margin: 0;
     padding: 0;
     max-width: 100vw;
     box-sizing: border-box;
     font-family: cursive;
-   
+
 }
 
-ul
-{
+ul {
     list-style: none;
 }
+
 a {
     text-decoration: none;
     color: inherit;
-    transition: all 0.5s ease-in-out; /* Transition all properties in 0.3 seconds with ease-in-out timing function */
-    
-  }
+    transition: all 0.5s ease-in-out;
+    /* Transition all properties in 0.3 seconds with ease-in-out timing function */
 
-/* Loading Icon While Wepage Loades*/
+}
+
+/* Loading Icon While Wepage Loades */
 /*===================================================================*/
 .loader-container {
     position: fixed;
@@ -59,80 +64,100 @@ a {
     }
 }
 
+/* Header Section CSS*/
 /*===================================================================*/
 
-#header
-{
+/*This is the yellow bg for Main Landing Section */
+#header {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(253, 196, 53, 1);
-    
+    background-color: var(--primary-color);
 }
-.header-flex{
+
+/* Add a bg color to the left side of the page */
+.header-bg {
+    height: 100%;
+    aspect-ratio: 1;
+    /*mask-image: url('../svg/header-bg.svg');*/
+    mask-image: url('../image/header-bg.png');
+    background-color: var(--primary-color);
+    mask-size: cover;
+}
+
+.header-bg>div {
+    width: 100%;
+    height: 100%;
+    background-color: coral;
+}
+
+
+/* Below 2 are to switch the header class from flex to block for mobile and dekstop modes*/
+.header-flex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.header-block{
+
+.header-block {
     display: block;
-  
+
 }
+
 .rounded-box {
-    
+
     width: 80%;
     height: 80%;
     background-color: #fff;
-    border-radius: 10px; /* Adjust the radius as needed */
-    box-shadow: 0px 12px 12px rgba(146, 98, 6, 0.25); /* Adjust the shadow as needed */
-    
-    padding: 0px 20px;
-  }
+    border-radius: 10px;
+    /* Adjust the radius as needed */
+    box-shadow: 0px 12px 12px var(--primary-color-shadow);
+    /* Adjust the shadow as needed */
 
-  .ham-list
-  {
+    padding: 0px 20px;
+
+}
+
+.ham-list {
     display: flex;
-    padding:0;
-   width: fit-content;
-  }
-  .ham-list>li
-  {
+    padding: 0;
+    width: fit-content;
+}
+
+.ham-list>li {
     margin: 0px 5px;
-  }
-  .ham-list>li>a
-  {
+}
+
+.ham-list>li>a {
     padding: 10px 15px;
     margin: 5px 10px;
     font-size: larger;
-  }
- .brand{
+}
+
+.brand {
     display: inline-block;
     width: fit-content;
     margin: 0px 20px;
- }
-  .ham-list>li>a:hover
-  {
+}
+
+.ham-list>li>a:hover {
     background-color: rgba(253, 196, 53, 1);
     color: #fff;
-    border-radius: 10px; /* Adjust the radius as needed */
-    box-shadow: 0px 4px 4px rgba(146, 98, 6, 0.25); /* Adjust the shadow as needed */
-  }
-#large-header
-{
+    border-radius: 10px;
+    /* Adjust the radius as needed */
+    box-shadow: 0px 4px 4px rgba(146, 98, 6, 0.25);
+    /* Adjust the shadow as needed */
+}
+
+#large-header {
     justify-content: space-between;
 }
 
-.main-large-header
-{
+.main-large-header {
     display: flexbox;
-    align-content: space-between;
+    align-content: center;
     justify-items: end;
     width: 40%;
     margin-right: 5em;
-   
-
-
 }
-  /*====================*/
- 
-  
- 
+
+/*====================*/
