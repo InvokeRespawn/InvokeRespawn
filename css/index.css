@@ -3,15 +3,20 @@
 :root {
     --primary-color: #89CFF0;
     --primary-color-shadow: #2794c771;
+    font-size: 16px;
+    box-sizing: border-box;
 }
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
-    max-width: 100vw;
-    box-sizing: border-box;
+    width: 100%;
     font-family: cursive;
-
+    box-sizing: border-box;
 }
 
 ul {
@@ -69,7 +74,7 @@ a {
 
 /*This is the yellow bg for Main Landing Section */
 #header {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: var(--primary-color);
 }
@@ -159,3 +164,91 @@ a {
 }
 
 /*====================*/
+/* Footer */
+/*====================*/
+.footer
+{
+display: flex;
+justify-content: space-between;
+padding: 2em;
+}
+.social-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    padding:1em;
+    
+}
+.social-buttons{
+
+    background-color: #fff;
+        border-radius: 100%;
+        /* Adjust the radius as needed */
+        box-shadow: 0px 12px 12px var(--primary-color-shadow);
+        /* Adjust the shadow as needed */
+        padding: .5em 1em;
+        margin: .5em 1em;
+}
+.social-text
+{
+display: inline-block;
+margin: .5em;
+text-align: center;
+}
+
+
+/* Form styling */
+.contact-form {
+    width: 50%;
+    /* max-width:40em; */
+    padding: 1em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Input and Textarea fields */
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    /* padding: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Submit button styling */
+.contact-form button {
+    padding: 12px 24px;
+    background-color: #6ec1e4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #5aa6bf;
+}
+
+.copy-right
+{
+    text-align: center;
+}
+/*====================*/
+
+
