@@ -8,92 +8,82 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
-
+    <script src="js/index.js"></script>
 </head>
 
 <body>
-    <script src="js/index.js"></script>
-    <div class="loader-container">
-        <div class="loader"></div>
+
+    <div id="scrollBtnCtn">
+        <button id="scrollToTop" type="button" onclick="ScrollToTopButton()">
+            <span class="bi bi-chevron-up"></span>
+        </button>
+        <svg class="scrollRing" viewBox="0 0 100 100">
+            <circle id="scrollProgress" cx="50" cy="50" r="48" />
+        </svg>
     </div>
 
-    <header id="header">
 
-        <!-- <div id="large-header" class="rounded-box">
-            <ul class="ham-list">
-                <li><a href="#work">Work</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-            </ul> 
-            <div id="main-header" class="main-large-header">
-
-                <h2>Game Developer</h2>
-                <p>Hello, my name is Sagar Kumar</p>
-                <p>Currently, I'm a Unity Developer at <a href="">Vihaa Technologies LLP</a>,</p>
-                <p>A self-taught UI/UX designer, functioning in the industry for 3+ years now.
-                    I make meaningful and delightful digital products that create an equilibrium
-                    between user needs and business goals.</p>
-                <div>
-                    <button>Projects</button>
-                    <button>LinkedIn</button>
-                </div>
-            </div>
-            <div class="header-bg">
-                <div class="header-bg-color"></div>
-            </div>
-        </div> -->
+    <header>
 
     </header>
-    <!-- <section id="work">Vihaa technologies LLP (Feb 2022- Jan 2025)
-        <p>Worked on : 
-            Platforms Worked on : Android , IOS, Amazon, Huawae, Samsung, Windows
-            Technologies Worked on: Play Asset Delivery, On Deman Resources
-                Day to Day Task:
-                Core Game Play/Game Modes Integration
-                Localization
-                Asset Management
-                Project Optimization
-                ANR and Crash Fixes
-                Editor Work- Automation
-                
-        </p>
-    </section> -->
-    <section id="projects">all projects will come here</section>
-    <section id="about">a little about me</section>
+    <main>
+        <section class="sizeX shadowBox">
+            <h1 class="heading">Get in touch</h1>
+            <div class="footer">
+                <div class="left-footer">
+                    <h2 class="subHeading">Let's Collaborate</h2>
+                    <ul class="social-container">
+                        <li class="social-buttons"><a href="https://x.com/S4g4rkumar" target="_blank"><span
+                                    class="ico bi-twitter-x"></span>
+                            </a></li>
+                        <li class="social-buttons"><a href="discordapp.com/users/609782153097773069"
+                                target="_blank"><span class="ico bi-discord"></span>
 
+                            </a></li>
+                        <li class="social-buttons"><a href="https://www.linkedin.com/in/s4g4rkumar/"
+                                target="_blank"><span class="ico bi-linkedin"></span>
+
+                            </a></li>
+                        <li class="social-buttons"><a href="https://www.instagram.com/s4g4rkumar/" target="_blank"><span
+                                    class="ico bi-instagram"></span>
+
+                            </a></li>
+                        <li class="social-buttons"><a href="https://steamcommunity.com/id/Ghost_47_cs/"
+                                target="_blank"><span class="ico bi-steam"></span>
+
+                            </a></li>
+                        <li class="social-buttons"><a href="" target="_blank"><span class="ico bi-skype"></span>
+
+                            </a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <form id="contact-form" onsubmit="submitForm(event)">
+                        <div class="name-group">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                        </div>
+                        <input type="email" id="email" name="email" required placeholder="Email">
+                        <input type="text" id="subject" name="subject" required placeholder="Subject">
+                        <textarea id="message" name="message" rows="10" required placeholder="Message"></textarea>
+                        <button class="submitBtn" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
     <footer>
-        <div class="footer">
-
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-
-            <ul class="social-container">
-                <li class="social-buttons"><a href="" target="_blank"><span class="bi-twitter-x" ></span><p class="social-text">Twitter</p></a></li>
-                <li class="social-buttons"><a href="" target="_blank"><span class="bi-discord"></span><p class="social-text">Discord</p></a></li>
-                <li class="social-buttons"><a href="" target="_blank"><span class="bi-linkedin"></span><p class="social-text">LinkedIn</p></a></li>
-                <li class="social-buttons"><a href="" target="_blank"><span class="bi-instagram"></span></a><p class="social-text">Instagram</p></li>
-                <li class="social-buttons"><a href="" target="_blank"><span class="bi-skype"></span><p class="social-text">Skype</p></a></li>
-
-            </ul>
-        </div>
-
-        <p class="copy-right">Sagar Kumar <span class="bi-c-circle">2025</span></p>
-
+        <p class="copy-right"><span class="bi-c-circle"> Created by Sagar Kumar</span></p>
     </footer>
+
+
+
+
+
+
 
 
 </body>

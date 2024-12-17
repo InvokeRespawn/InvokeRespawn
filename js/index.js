@@ -1,44 +1,55 @@
-// Turn off Loading icon when loading is completed
 window.addEventListener('load', function () {
-    const loader = document.querySelector('.loader-container');
-    loader.style.display = 'none';
 
-
-    const header = document.getElementById('header');
-
-    // if (window.innerWidth > window.innerHeight) {
-    //     header.classList.add("header-flex");
-    // }
-    // else {
-    //     header.classList.add("header-block");
-    // }
-
-
-
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Your message has been sent!');
-        // Optionally clear the form fields
-        this.reset();
-    });
-   
 });
 
+function getScrollPercentage() {
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
+  return Math.min(100, Math.max(0, scrolled));
+}
 
-// switch between mobile and large screen view
-window.addEventListener('resize', function () {
 
-    const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  const percentage = getScrollPercentage();
+  const newValue = 301.6 - ((percentage / 100) * 301.6);
 
+  const specificElement = document.getElementById('scrollProgress');
+  specificElement.style.setProperty('--scroll-progress', newValue.toFixed(2));
 
-    // if (window.innerWidth > window.innerHeight) {
-
-    //     header.classList.replace("header-block","header-flex");
-    // } else {
-
-    //     header.classList.replace("header-flex","header-block");
-    // }
+  let button = document.getElementById('scrollBtnCtn');
+  if (window.scrollY > 0) {
+    button.classList.add('slideInBottom');
+  } else {
+    button.classList.remove('slideInBottom');
+  }
 });
+function ScrollToTopButton() {
+  console.log("Scroll Pressed");
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+
+function submitForm(event) {
+  event.preventDefault();
+
+  const firstName = document.getElementById('firstName').value;
+  const lastName = document.getElementById('lastName').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  const body = encodeURIComponent(
+    `Name: ${firstName} ${lastName}
+    Email: ${email}
+
+    Message:
+    ${message}`
+  );
+
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+  window.location.href = mailtoLink;
+}
+
 
 
 
