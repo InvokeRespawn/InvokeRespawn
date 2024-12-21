@@ -60,7 +60,7 @@ a {
 .shadowBox {
     background-color: var(--primary-color);
     border-radius: 1em;
-    margin: auto;
+    margin: 3em auto;
     box-shadow: 0 6px 8px var(--primary-color-shadow);
     padding: 1em 2em;
 }
@@ -242,4 +242,32 @@ footer {
     stroke-dasharray: 301.6;
     stroke-dashoffset: var(--scroll-progress);
     transition: stroke-dashoffset 0.1s linear;
+}
+
+
+
+
+
+
+
+/*======================================*/
+#blogContainer
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.blog-item
+{
+    width: 300px;
+padding: 1em;
+margin: 1em;
+box-shadow: 0 4px 6px var(--primary-color-shadow);
+border-radius: 1em;
+   
+}
+.blog-link
+{
+    display: block;
+    text-align: right;
 }

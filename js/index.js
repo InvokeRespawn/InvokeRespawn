@@ -51,5 +51,98 @@ function submitForm(event) {
 }
 
 
+const jsonURL = 'http://127.0.0.1:3000/json/BlogData.json'; 
+
+const xhr = new XMLHttpRequest();
+
+// Configure it: GET-request for the URL
+xhr.open('GET', jsonURL, true);
+
+// Set up a function to handle the response
+xhr.onload = function () {
+  if (xhr.status >= 200 && xhr.status < 300) {
+    try {
+      // Parse the JSON response
+      const data = JSON.parse(xhr.responseText);
+      console.log('JSON Data:', data);
+
+      const parentElement = document.getElementById('blogContainer');
+      if (!parentElement) {
+        console.error('No element with ID "blog" found.');
+        return;
+      }
+
+      // Example: Accessing the articles and their details
+      data.forEach(item => {
+
+// Create a time element
+const divElement = document.createElement('div');
+divElement.classList.add('blog-item');
+
+const timeElement = document.createElement('time');
+timeElement.setAttribute('datetime', item.Date); // Set the datetime attribute
+timeElement.textContent = item.Date; 
+timeElement.classList.add('blog-time');// Set the content
+
+// Create an h3 element for the title
+const h3Element = document.createElement('h3');
+h3Element.textContent = item.Title;
+h3Element.classList.add('blog-title'); 
+
+// Create an anchor (a) element for the link
+const aElement = document.createElement('a');
+aElement.setAttribute('href', item.Link); // Set the href attribute
+aElement.textContent = 'Read more'; // Link text
+aElement.classList.add('blog-link');
+
+// Append the new elements to the parent
+divElement.appendChild(timeElement);
+divElement.appendChild(h3Element);
+divElement.appendChild(aElement);
+
+parentElement.appendChild(divElement);
 
 
+
+        console.log(`Title: ${item.Title}`);
+        console.log(`Link: ${item.Link}`);
+        item.TextDescription.forEach(description => {
+          console.log(`Paragraph: ${description.paragraph}`);
+        });
+        item.Images.forEach(image => {
+          console.log(`Image URL: ${image.url}`);
+          console.log(`Alt Text: ${image.alt}`);
+        });
+      });
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+      jsonParsingIssue();
+    }
+  } else {
+    console.error(`HTTP Error: ${xhr.status}`);
+  }
+};
+
+// Handle network errors
+xhr.onerror = function () {
+  console.error('Network Error');
+  
+  jsonParsingIssue();
+};
+
+// Send the request
+xhr.send();
+
+
+function jsonParsingIssue()
+{
+  // Find the element with the ID 'blog' and set its display to 'none'
+  const blogElement = document.getElementById('blog');
+  if (blogElement) {
+    blogElement.style.display = 'none';
+    console.log('Element with ID "blog" hidden due to error.');
+  } else {
+    console.error('No element with ID "blog" found.');
+  }
+
+}
