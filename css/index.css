@@ -271,3 +271,12 @@ border-radius: 1em;
     display: block;
     text-align: right;
 }
+
+
+/*======================================*/
+
+.boxProject {
+    margin: 3em auto;
+    padding:2em;
+}
+
