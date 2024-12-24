@@ -255,3 +255,30 @@ function projectJsonParsingIssue() {
     console.error('No element with ID "blog" found.');
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+     function HamBurgerClick(){
+      const bars = document.querySelectorAll('.bar');
+      console.log("boom boom:"+bars.length);
+     
+        bars[0].classList.add('animateTop');
+        bars[1].classList.add('animateMiddle');
+        bars[2].classList.add('animateBottom');
+      
+    }
+
+
+
+
+
+

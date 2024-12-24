@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sagar Kumar </title>
+    <title>Sagar Kumar</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
@@ -24,25 +24,47 @@
 
 
     <header>
+        <div>
+            <span class="bi-brandlogo"></span>
+        </div>
+        <div>
+            <div class="ham-ico">
+                <button class="ham" onclick="HamBurgerClick()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+            <ul>
+                <li><a href="#work"></a>Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="http://">Contact</a></li>
+            </ul>
+        </div>
 
     </header>
     <main>
+        <section id="landing"></section>
+        <section id="work"></section>
+        <section id="about"></section>
         <section id="project" class="sizeX boxProject">
             <h1 class="heading">Get in touch</h1>
             <h2 class="subHeading">Latest Blogs</h2>
             <div id="projectContainer"></div>
         </section>
 
-        <section id ="blog" class ="sizeX shadowBox">
+        <section id="blog" class="sizeX shadowBox">
             <h1 class="heading">Blog</h1>
             <h2 class="subHeading">Latest Blogs</h2>
             <div id="blogContainer"></div>
         </section>
-        
+
         <section class="sizeX shadowBox">
             <h1 class="heading">Get in touch</h1>
-            <div class="footer">
-                <div class="left-footer">
+            <div class="contact">
+                <div class="left-contact">
                     <h2 class="subHeading">Let's Collaborate</h2>
                     <ul class="social-container">
                         <li class="social-buttons"><a href="https://x.com/S4g4rkumar" target="_blank"><span

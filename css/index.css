@@ -85,16 +85,16 @@ a {
 
 /* Get In Touch Section */
 /*====================*/
-.footer {
+.contact {
     display: flex;
 }
 
-.footer>div {
+.contact>div {
     width: 50%;
 
 }
 
-.left-footer {
+.left-contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -251,23 +251,22 @@ footer {
 
 
 /*======================================*/
-#blogContainer
-{
+#blogContainer {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.blog-item
-{
+
+.blog-item {
     width: 300px;
-padding: 1em;
-margin: 1em;
-box-shadow: 0 4px 6px var(--primary-color-shadow);
-border-radius: 1em;
-   
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 0 4px 6px var(--primary-color-shadow);
+    border-radius: 1em;
+
 }
-.blog-link
-{
+
+.blog-link {
     display: block;
     text-align: right;
 }
@@ -277,6 +276,99 @@ border-radius: 1em;
 
 .boxProject {
     margin: 3em auto;
-    padding:2em;
+    padding: 2em;
 }
 
+
+
+
+/*MERGE*/
+
+/****************
+  * Burger Styles *
+  *****************/
+.ham {
+    width: 4em;
+    height: 3em;
+    padding: .5em;
+    border: none;
+    background-color: transparent;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+}
+.bar {
+    height: .3em;
+    width: 90%;
+    border-radius: 2px;
+    background-color: black;
+    display: block;
+}
+.animateTop
+{
+    animation: merge-top .6s ease-in-out forwards;
+}
+.animateMiddle
+{
+    animation: merge-middle .6s ease-in-out forwards;
+}
+.animateBottom
+{
+    animation: merge-bottom .6s ease-in-out forwards;
+}
+
+
+@keyframes merge-top {
+    20% {
+        /* top: 50%; */
+        transform: translate(-50%, -50%) rotate(0) scale(1, 1);
+        /* width: 100%; */
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(0) scale(0.2, 1);
+        /* width: 20%; */
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(-45deg) scale(0.2, 1);
+        /* width: 20%; */
+    }
+
+    100% {
+        /* top: 50%; */
+        transform: translate(-50%, -50%) rotate(-45deg) scale(1, 1);
+        /* width: 100%; */
+    }
+}
+
+@keyframes merge-middle {
+    50% {
+        transform: translate(-50%, -50%) scale(0.2, 1);
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes merge-bottom {
+    20% {
+        /* bottom: 40%; */
+        transform: translate(-50%, -50%) rotate(0deg) scale(1, 1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(0.2, 1);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(0.2, 1);
+    }
+
+    100% {
+        /* bottom: 40%; */
+        transform: translate(-50%, -50%) rotate(45deg) scale(1, 1);
+    }
+}
