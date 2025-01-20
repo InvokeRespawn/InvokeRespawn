@@ -1,17 +1,15 @@
 /* Required*/
 /*===================================================================*/
 :root {
-    --primary-color: #ffffff;
-    --primary-color-shadow: #e4e4e4;
-    --secondary-color: #fff;
-    --secondary-color-shadow: #2794c771;
-    --ascent-color: #fff;
+    --primary-color: #e6eaee;
+    --primary-color-shadow: #c7c4b7;
+    --ascent-color: #CCD6DD;
     --ascent-color-shadow: #2794c771;
-    --highlight-color: #fff;
+    --highlight-color: #C5BAFF;
     --highlight-color-shadow: #2794c771;
-    --packman-color: #fff;
     font-size: 16px;
     --scroll-progress: 301.6;
+   
 }
 
 @media only screen and (max-width: 768px) {
@@ -28,13 +26,14 @@
 
 html {
     box-sizing: border-box;
+    background-color: var(--primary-color);
 }
 
 body {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: cursive;
+    font-family:sans-serif;
     box-sizing: border-box;
 }
 
@@ -70,6 +69,7 @@ a {
     font-weight: normal;
     text-transform: uppercase;
     padding: 0 1em;
+    
 }
 
 .subHeading {
@@ -79,8 +79,86 @@ a {
 }
 
 /*========================*/
+.flexHeader
+{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    min-height: 50vh;
+    padding: 5em 1em;
+}
+.card {
+    background-color: var(--primary-color);
+    border-radius: 1em;
+    box-shadow: 0 6px 8px var(--primary-color-shadow);
+    padding: 2em 1em;
+    margin: 1em;
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
 
+.card-links{
+    display: flex;
+    justify-content:center;
 
+}
+.card-link{
+    margin: 1em;
+    padding: .5em;
+    background-color: var(--highlight-color);
+    border-radius: .5em;
+    text-align: center;
+    width: 3em;
+    height: 3em;
+}
+.card-link span{
+    font-size: 1.5em;
+   color: white;
+}
+.card-image{
+    width: 100%;
+    height: max-content;
+    max-height: 60%;
+    border-radius: 1em;
+}
+.card-heading
+{
+margin:0;
+text-align: center;
+}
+.card-subheading
+{
+    margin: 0;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1em;
+    color: var(--ascent-color);
+}
+.mainTextArea {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+   padding: 1em;
+   padding-bottom: 6em;
+   margin: 1em;
+}
+.mainText {
+    font-size: 1.5em;
+    line-height: 1.5em;
+   font-optical-sizing: auto;
+    overflow-wrap: break-word;
+}
+.stats
+{
+    display: flex;
+    justify-content: space-around;
+   
+}
 
 
 /* Get In Touch Section */
@@ -177,6 +255,7 @@ textarea {
     width: 100%;
     height: 3em;
     background: var(--primary-color);
+    background: #66757F;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;

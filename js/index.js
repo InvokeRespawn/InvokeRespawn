@@ -151,6 +151,9 @@ function submitForm(event) {
 
 
 /*============================================================================== */
+
+//update this url such that it uses local host in current environment but uses the actual domain in production
+
 const projectJSONURL = 'http://127.0.0.1:3000/json/ProjectData.json';
 
 const xhr = new XMLHttpRequest();
@@ -192,8 +195,8 @@ xhr.onload = function () {
         const stackElement = document.createElement('ul');
         item.Stack.forEach(subItem => {
           const stackSubElement = document.createElement('li');
-          const stackSpanElement= document.createElement('span');
-          stackSpanElement.textContent= subItem.Name;
+          const stackSpanElement = document.createElement('span');
+          stackSpanElement.textContent = subItem.Name;
 
           stackSubElement.appendChild(stackSpanElement);
           stackElement.appendChild(stackSubElement);
@@ -203,13 +206,13 @@ xhr.onload = function () {
         const projectElement = document.createElement('ul');
         item.links.forEach(subItem => {
           const stackSubElement = document.createElement('li');
-          const stackHrefElement= document.createElement('a');
+          const stackHrefElement = document.createElement('a');
           stackHrefElement.href = subItem.Link;
           stackHrefElement.target = "_blank";
 
           const stackSpanElement = document.createElement('span');
-          stackSpanElement.classList.add('bi-'+subItem.Icon);
-          
+          stackSpanElement.classList.add('bi-' + subItem.Icon);
+
           stackHrefElement.appendChild(stackSpanElement);
           stackSubElement.appendChild(stackHrefElement);
           projectElement.appendChild(stackSubElement);
@@ -267,15 +270,15 @@ function projectJsonParsingIssue() {
 
 
 
-     function HamBurgerClick(){
-      const bars = document.querySelectorAll('.bar');
-      console.log("boom boom:"+bars.length);
-     
-        bars[0].classList.add('animateTop');
-        bars[1].classList.add('animateMiddle');
-        bars[2].classList.add('animateBottom');
-      
-    }
+function HamBurgerClick() {
+  const bars = document.querySelectorAll('.bar');
+  console.log("boom boom:" + bars.length);
+
+  bars[0].classList.add('animateTop');
+  bars[1].classList.add('animateMiddle');
+  bars[2].classList.add('animateBottom');
+
+}
 
 
 
