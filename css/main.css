@@ -1,32 +1,17 @@
-.vertical-line {
-    width: 4px;
-    height: 100;
-    background-color: var(--primary-color);
-}
-
-.x4Text {
-    font-size: 4em;
-}
-
+/*------- Hero/Main -------*/
 main {
     display: flex;
     padding: 8em 8em;
 }
 
-
+/*------- Hero Text Section -------*/
 .hero-content {
     padding-right: 3em;
-    width: 75%;
-}
-
-.hero-image {
-    padding: 1em;
-    margin: auto;
-    width: 50%;
+    width: 60%;
 }
 
 .hi-text {
-    margin: 1em 0;
+    margin: 1em auto;
     font-size: 3em;
 }
 
@@ -35,19 +20,14 @@ main {
     font-size: 2em;
 }
 
+/*------- Hire me and Download CV Buttons --------*/
 .main-button {
+    padding: .8em 1.8em;
     margin: 2em 1em;
     font-size: 1.5em;
 }
 
-.myName {
-    color: var(--primary-color);
-}
-
-.primary-color {
-    color: var(--primary-color);
-}
-
+/*------- Stats SubSection -------*/
 .stats {
     display: flex;
     justify-content: flex-start;
@@ -66,113 +46,66 @@ main {
     color: var(--primary-text-color);
 }
 
-.work-heading {
-    font-size: 2em;
-    margin: 1em auto;
+.vertical-line {
+    width: 4px;
+    height: 100;
+    background-color: var(--primary-color);
 }
 
-.company-list {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
+.x4Text {
+    font-size: 4em;
 }
 
-.company-item {
+/*------- Hero Image/Card Section -------*/
+.hero-image {
     padding: 1em;
-    border-left: 2px solid var(--primary-text-color);
-}
-
-.main-work {
-    display: flex;
-
-    margin: 2em 0;
-}
-
-.work-tasks {
-    flex-direction: column;
-}
-
-.mainImage {
-    border-radius: 2em;
-    width: 100%;
-}
-
-@media screen and (max-width: 1400px) {
-
-    main {
-        flex-direction: column;
-        height: 100vh ;
-
-    }
-
-    .hero-content {
-        width: 100%;
-    }
-
-    .hero-image {
-        padding: 1em;
-        margin: auto;
-        width: 80%;
-        object-fit: contain;
-    }
-
-    main {
-        padding: 4em 2em;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-
-    main {
-        flex-direction: column;
-        height: calc(100vh - 4em);
-    }
-
-    .hero-content {
-        width: 100%;
-    }
-
-    .hero-image {
-        padding: 1em;
-        margin: auto;
-        width: 80%;
-        object-fit: contain;
-    }
-
-    main {
-        padding: 4em 2em;
-    }
-}
-
-@media screen and (max-width: 1008px) {
-
-    .hero-image {
-        padding: 1em;
-        margin: auto;
-        width: 100%;
-    }
-
+    margin: auto;
+    width: 40%;
 }
 
 .card {
-    background-color: var(--primary-color);
-    border-radius: 1em;
-    box-shadow: 0 6px 8px var(--primary-color-shadow);
-    padding: 2em 1em;
-    margin: 1em;
-    width:30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    width: 50%;
+    min-width: 25em;
+    min-height: 45em;
+    margin: auto;
+    padding: 2em 1em;
+    border-radius: 1em;
+    box-shadow: 0 6px 8px var(--shadow-color);
 }
 
-.card-links{
+.card-image {
+    width: 100%;
+    min-height: 30em;
+    border-radius: 1em;
+    background-image: url('../images/hero-image.jpg');
+    background-color: var(--primary-color);
+}
+
+/*------- Hero Text/Card Section -------*/
+.card-heading {
+    text-align: center;
+    font-size: 3em;
+}
+
+.card-subheading {
+    margin: .2em;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.3em;
+    color: var(--ascent-color);
+}
+
+/*------- Card Buttons -------*/
+.card-links {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 
 }
-.card-link{
+
+.card-link {
     margin: 1em;
     padding: .5em;
     background-color: var(--highlight-color);
@@ -181,26 +114,72 @@ main {
     width: 3em;
     height: 3em;
 }
-.card-link span{
+
+.card-link span {
     font-size: 1.5em;
-   color: white;
+    color: white;
 }
-.card-image{
-    width: 100%;
-    height: max-content;
-    max-height: 60%;
-    border-radius: 1em;
+
+/*------- Responsive Design/Media Queries -------*/
+@media screen and (max-width: 1400px) {
+    main {
+        padding: 4em 2em;
+    }
+
+    .hi-text {
+        margin: .6em 0;
+    }
+
+    .main-button {
+        margin: 1em;
+    }
 }
-.card-heading
-{
-margin:0;
-text-align: center;
+
+@media screen and (max-width: 1200px) {
+
+    .hero-content {
+        width: 50%;
+        padding: 0;
+    }
+
+    .stats-item {
+        margin: 0;
+        margin-right: 2em;
+        padding-right: 0;
+    }
+
+    .main-button {
+        padding: .8em 1.4em;
+        margin: 1em .5em;
+        font-size: 1.5em;
+    }
+
+    .hero-text {
+        margin-bottom: 1em;
+    }
 }
-.card-subheading
-{
-    margin: 0;
-    text-align: center;
-    font-weight: 100;
-    font-size: 1em;
-    color: var(--ascent-color);
+
+@media screen and (max-width: 1008px) {
+    main {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-image {
+        padding: auto;
+        margin: auto;
+        margin-top: 4em;
+        width: 100%;
+    }
+
 }
+
+/*small device break point*/
+/* @media screen and (max-width: 1008px) {
+   
+
+} */

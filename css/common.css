@@ -87,6 +87,7 @@ a:hover {
     display: none;
     border: none;
 }
+
 #hamburger:hover .line {
     background-color: var(--primary-color);
 }
@@ -102,8 +103,8 @@ a:hover {
     display: none;
 }
 
-#topline.topclose{
-    transform:rotate(-45deg);
+#topline.topclose {
+    transform: rotate(-45deg);
     translate: -4px 5px;
 }
 
@@ -112,13 +113,23 @@ a:hover {
     translate: -3px -3px;
 }
 
+/*------- Resume Button -------*/
+#btn-resume {
+    font-size: 1.2em;
+}
+
+/*------- Common Classes -------*/
 .active {
+    color: var(--primary-color);
+}
+
+.primary-color {
     color: var(--primary-color);
 }
 
 .common-btn {
     cursor: pointer;
-    padding: .6em 1.8em;
+    padding: .4em 1.4em;
     border-radius: 10em;
     border-width: 2px;
     border-style: solid;
@@ -130,10 +141,7 @@ a:hover {
     color: var(--primary-color);
 }
 
-#btn-resume {
-    font-size: 1.2em;
-}
-
+/*------- Responsive Design/Media Queries -------*/
 @media screen and (max-width: 1400px) {
     #topNav {
         padding: 0 2em;
@@ -187,7 +195,7 @@ a:hover {
 
     .nav-item {
 
-        margin: .8em auto;
+        margin: .5em auto;
     }
 
     .nav-item a {
