@@ -75,8 +75,10 @@ a:hover {
 
 /*------- Navigation Items -------*/
 .nav-item {
-    /* padding: 1em; */
     margin: auto .5em;
+}
+
+.nav-item a {
     font-size: 1.2em;
 }
 
@@ -84,7 +86,9 @@ a:hover {
 #hamburger {
     display: none;
     border: none;
-
+}
+#hamburger:hover .line {
+    background-color: var(--primary-color);
 }
 
 .line {
@@ -94,6 +98,19 @@ a:hover {
     margin: 0.4em;
 }
 
+#middle.middleclose {
+    display: none;
+}
+
+#topline.topclose{
+    transform:rotate(-45deg);
+    translate: -4px 5px;
+}
+
+#bottom.bottomclose {
+    transform: rotate(45deg);
+    translate: -3px -3px;
+}
 
 .active {
     color: var(--primary-color);
@@ -101,12 +118,21 @@ a:hover {
 
 .common-btn {
     cursor: pointer;
-    padding: 1em 2em;
+    padding: .6em 1.8em;
     border-radius: 10em;
+    border-width: 2px;
     border-style: solid;
     border-color: var(--primary-text-color);
 }
 
+.common-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+#btn-resume {
+    font-size: 1.2em;
+}
 
 @media screen and (max-width: 1400px) {
     #topNav {
@@ -118,6 +144,7 @@ a:hover {
 
     #hamburger {
         display: block;
+        height: 4em;
     }
 
     #btn-resume {
@@ -126,6 +153,10 @@ a:hover {
 
     #nav {
         display: none;
+    }
+
+    #topNav {
+        padding: 0 1em;
     }
 
     #topNav.responsive {
@@ -156,7 +187,16 @@ a:hover {
 
     .nav-item {
 
-        margin: auto;
+        margin: .8em auto;
     }
+
+    .nav-item a {
+        font-size: 2em;
+    }
+
+    #btn-resume {
+        font-size: 2em;
+    }
+
 
 }

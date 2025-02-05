@@ -22,11 +22,11 @@
             <li class="nav-item"><button onclick="navItemClick()"><a href="#projects">Projects</a></button></li>
             <li class="nav-item"><button onclick="navItemClick()"><a href="#contactMe">Contact me</a></button></li>
         </ul>
-        <button id="btn-resume" class="common-btn"><a href="pdf/" target="_blank">Resume<span></span></a></button>
-        <button id="hamburger" onclick="hamburgerClick()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+        <button id="btn-resume" class="common-btn" onclick="resumeClick()">Resume<span></span></button>
+        <button id="hamburger" onclick="hamburgerClick()" aria-controls="nav" aria-expanded="false">
+            <div class="line" id="topline"></div>
+            <div class="line" id="middle"></div>
+            <div class="line" id="bottom"></div>
         </button>
     </header>
 
