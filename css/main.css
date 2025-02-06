@@ -106,18 +106,25 @@ main {
 }
 
 .card-link {
+    width: 4em;
+    height: 4em;
     margin: 1em;
-    padding: .5em;
-    background-color: var(--highlight-color);
+    padding: 1em;
     border-radius: .5em;
     text-align: center;
-    width: 3em;
-    height: 3em;
+    background-color: var(--shadow-color);
+   
 }
+.card-link:hover {
 
-.card-link span {
-    font-size: 1.5em;
-    color: white;
+    transform: scale(1.2);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+} 
+.icon {
+    font-size: 2em;
+    color: var(--secondary-color);
+    
 }
 
 /*------- Responsive Design/Media Queries -------*/

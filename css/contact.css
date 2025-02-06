@@ -1,108 +1,195 @@
-.contact {
+/*------- Contact Section -------*/
+#contactMe {
     display: flex;
-}
-
-.contact>div {
-    width: 50%;
-
-}
-.sizeX {
-    width: 90%;
-    max-width: 1400px;
-}
-
-.shadowBox {
-    background-color: var(--primary-color);
-    border-radius: 1em;
+    width: 80%;
     margin: 3em auto;
-    box-shadow: 0 6px 8px var(--primary-color-shadow);
     padding: 1em 2em;
+    border-radius: 1em;
+    border: 2px solid var(--primary-text-color);
+    box-shadow: 5px 10px 8px var(--shadow-color);
 }
+
+/*------- Heading and SubHeading -------*/
+.heading {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.subHeading {
+    font-size: 4em;
+}
+
+/*------- Left Side Contact Section -------*/
 .left-contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1em;
+    width: 50%;
 }
 
-@media only screen and (max-width: 1200px) {
-    .footer {
-        display: block;
-    }
-
-    .footer>div {
-        width: 100%;
-    }
-}
-
+/*------- Social Media Icons -------*/
 .social-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
 
-    flex-wrap: wrap;
     margin: 0;
     padding: 1em;
+    padding-right: 5em;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .social-buttons {
-    background-color: var(--primary-color);
+
     border-radius: 2em;
-    box-shadow: 0px .5em .5em var(--primary-color-shadow);
+    box-shadow: 0px .5em .5em var(--shadow-color);
     padding: 1em;
-    margin: 6px;
+    margin: .5em;
+}
+
+.social-buttons:hover {
+
+    transform: scale(1.5);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
 }
 
 .ico {
     font-size: 1.8em;
-}
-
-@media only screen and (max-width: 500px) {
-    .ico {
-        font-size: 1.5em;
-    }
+    color: var(--secondary-color);
 
 }
 
+
+/*-------- Right Side Contact Form -------*/
 #contact-form {
-    height: 30em;
+    width: 50%;
+    height: 40em;
     padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-
-
 .name-group {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-input[type="text"],
-[type="email"] {
+#email,
+#subject {
     width: 100%;
     height: 3em;
-    border: 1px solid #ccc;
+    border: 2px solid var(--primary-text-color);
     border-radius: 4px;
     padding: 0 .5em;
     font-size: 1em;
 }
 
+#firstName,
+#lastName {
+    width: 47%;
+    height: 3em;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 4px;
+    padding: 0 .5em;
+    font-size: 1em;
+}
+
+#message {
+    font-size: 1em;
+    border: 2px solid var(--primary-text-color);
+}
+
 textarea {
     width: 100%;
-    height: 15em;
+    height: 20em;
     resize: none;
     padding: .5em;
     font-size: 1em;
 }
 
 .submitBtn {
+    position: relative;
     width: 100%;
-    height: 3em;
-    background: var(--primary-color);
-    background: #66757F;
-    border: 1px solid #ccc;
+    height: 5em;
+    border: 2px solid var(--primary-text-color);
     border-radius: 4px;
     font-size: 1em;
+
+}
+
+.submitBtn::before {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1em;
+    height: 4.75em;
+    content: "";
+    border-radius: 2px 0px 0px 2px;
+    background-color: var(--primary-color);
+}
+
+/*------- Responsive Design/Media Queries -------*/
+@media screen and (max-width: 1480px) {
+    #contactMe {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-contact {
+        width: 100%;
+    }
+
+    .social-container {
+        padding-right: 0;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .name-group {
+        flex-direction: column;
+    }
+
+    #firstName,
+    #lastName {
+        width: 100%;
+        margin: .5em 0;
+    }
+
+    .heading {
+        font-size: 2em;
+    }
+    
+    .subHeading {
+        font-size: 3em;
+    }
+    .social-buttons {
+        margin: 1em;
+    }
+    .social-container {
+        grid-template-columns: auto auto auto ;
+    }
+}
+@media screen and (max-width: 480px) {
+
+
+    .heading {
+        font-size: 1.5em;
+    }
+    
+    .subHeading {
+        font-size: 2em;
+    }
+    .social-container {
+        grid-template-columns: auto auto ;
+    }
 }

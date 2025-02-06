@@ -1,7 +1,7 @@
 // Variables 
 let hamburgerExpanded = false;
-var nav,logo ,topNav,resumeBtn;
-var topline,middle,bottom;
+var nav, logo, topNav, resumeBtn;
+var topline, middle, bottom;
 var reponsiveclassName = "responsive";
 
 // Event Listeners for Page Load
@@ -14,6 +14,29 @@ window.addEventListener("load", (event) => {
     middle = document.getElementById("middle");
     bottom = document.getElementById("bottom");
 });
+
+
+//Scroll Event for Scroll Progress Bar
+window.addEventListener('scroll', () => {
+    const percentage = getScrollPercentage();
+    const newValue = 301.6 - ((percentage / 100) * 301.6);
+
+    const specificElement = document.getElementById('scrollProgress');
+    specificElement.style.setProperty('--scroll-progress', newValue.toFixed(2));
+
+    let button = document.getElementById('scrollBtnCtn');
+    if (window.scrollY > 0) {
+        button.classList.add('slideInBottom');
+    } else {
+        button.classList.remove('slideInBottom');
+    }
+});
+
+function getScrollPercentage() {
+    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
+    return Math.min(100, Math.max(0, scrolled));
+}
+
 
 //Hamburger Click Event
 function hamburgerClick() {
@@ -60,14 +83,12 @@ function removeResponsiveClass() {
     logo.classList.remove(reponsiveclassName);
     resumeBtn.classList.remove(reponsiveclassName);
 }
-function hamburgerShape()
-{
+function hamburgerShape() {
     topline.classList.remove("topclose");
     middle.classList.remove("middleclose");
     bottom.classList.remove("bottomclose");
 }
-function hamburgerCloseShape()
-{
+function hamburgerCloseShape() {
     topline.classList.add("topclose");
     middle.classList.add("middleclose");
     bottom.classList.add("bottomclose");
@@ -78,3 +99,9 @@ function enableScroll() {
 function disableScroll() {
     document.body.style.overflow = "hidden";
 }
+function ScrollToTopButton() {
+    console.log("Scroll Pressed");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
