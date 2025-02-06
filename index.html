@@ -7,6 +7,7 @@
     <title>Sagar Kumar | Home</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
     <script src="js/common.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -62,7 +63,7 @@
         </div>
         <div class="hero-image">
             <div class="card">
-                <img class="card-image" alt="" >
+                <img class="card-image" alt="">
                 <div>
                     <h1 class="card-heading primary-color">Sagar Kumar</h1>
                     <h2 class="card-subheading">Unity Developer</h2>
@@ -77,6 +78,60 @@
             </div>
         </div>
     </main>
+
+
+
+
+    <section class="sizeX shadowBox">
+        <h1 class="heading">Get in touch</h1>
+        <div class="contact">
+            <div class="left-contact">
+                <h2 class="subHeading">Let's Collaborate</h2>
+                <ul class="social-container">
+                    <li class="social-buttons"><a href="https://x.com/S4g4rkumar" target="_blank"><span
+                                class="ico bi-twitter-x"></span>
+                        </a></li>
+                    <li class="social-buttons"><a href="discordapp.com/users/609782153097773069"
+                            target="_blank"><span class="ico bi-discord"></span>
+
+                        </a></li>
+                    <li class="social-buttons"><a href="https://www.linkedin.com/in/s4g4rkumar/"
+                            target="_blank"><span class="ico bi-linkedin"></span>
+
+                        </a></li>
+                    <li class="social-buttons"><a href="https://www.instagram.com/s4g4rkumar/" target="_blank"><span
+                                class="ico bi-instagram"></span>
+
+                        </a></li>
+                    <li class="social-buttons"><a href="https://steamcommunity.com/id/Ghost_47_cs/"
+                            target="_blank"><span class="ico bi-steam"></span>
+
+                        </a></li>
+                    <li class="social-buttons"><a href="" target="_blank"><span class="ico bi-skype"></span>
+
+                        </a></li>
+
+                </ul>
+            </div>
+            <div>
+                <form id="contact-form" onsubmit="submitForm(event)">
+                    <div class="name-group">
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                    </div>
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                    <input type="text" id="subject" name="subject" required placeholder="Subject">
+                    <textarea id="message" name="message" rows="10" required placeholder="Message"></textarea>
+                    <button class="submitBtn" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p class="copy-right"><span class="bi-c-circle"> Created by Sagar Kumar</span></p>
+    </footer>
 </body>
 
 </html>

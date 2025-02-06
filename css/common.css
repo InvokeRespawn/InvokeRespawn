@@ -140,7 +140,13 @@ a:hover {
     border-color: var(--primary-color);
     color: var(--primary-color);
 }
+footer {
+    margin: 3em auto;
+}
 
+.copy-right {
+    text-align: center;
+}
 /*------- Responsive Design/Media Queries -------*/
 @media screen and (max-width: 1400px) {
     #topNav {
