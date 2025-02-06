@@ -1,17 +1,18 @@
+#company-list {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
 #work {
     margin: auto;
-    width: 80%;;
+    width: 80%;
 }
 .work-heading {
     font-size: 3em;
     margin: 1em auto;
 }
 
-.company-list {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-}
 
 .company-item {
     padding: 1em;
@@ -23,7 +24,7 @@
     margin: 2em 0;
 }
 
-.work-tasks {
+#workTasks {
     flex-direction: column;
     list-style-type:disc;
 }

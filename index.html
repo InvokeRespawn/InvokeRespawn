@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/work.css">
     <script src="js/common.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/work.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
@@ -22,9 +23,9 @@
         </div>
         <ul id="nav">
             <li class="nav-item"><button onclick="navItemClick()"><a href="#hero" class="active">Home</a></button></li>
-            <li class="nav-item"><button onclick="navItemClick()"><a href="#aboutMe">About me</a></button></li>
             <li class="nav-item"><button onclick="navItemClick()"><a href="#work">Work</a></button></li>
             <li class="nav-item"><button onclick="navItemClick()"><a href="#projects">Projects</a></button></li>
+            <li class="nav-item"><button onclick="navItemClick()"><a href="#aboutMe">About me</a></button></li>
             <li class="nav-item"><button onclick="navItemClick()"><a href="#contactMe">Contact me</a></button></li>
         </ul>
         <button id="btn-resume" class="common-btn" onclick="resumeClick()">Resume<span></span></button>
@@ -85,18 +86,15 @@
     <section id="work">
         <h1 class="work-heading"><span class="primary-color">01.</span> Where I've Worked <span></span></h1>
         <div class="main-work">
-            <ul class="company-list">
-                <li class="company-item"><button>Vihaa Technologies LLP</button></li>
-                <li class="company-item"><button>Upcoming</a></li>
+            <ul id="company-list">
+                
             </ul>
             <div>
-                <h2>Unity Developer <span class="primary-color">@ Vihaa Technologies LLP</span></h2>
-                <time datetime="">2022 - Present</time>
-                <ul class="work-tasks">
-                    <li>Developed 3D games using Unity Engine</li>
-                    <li>Worked on AR/VR projects</li>
-                    <li>Developed 2D games using Unity Engine</li>
-                    <li>Developed 2D games using Unity Engine</li>
+                <h2 id="currentCompany">Sample Title </h2>
+                <h2 id="TitleCompanyName" class="primary-color">@ Company Name</h2>
+                <time id="companyYear">xxxx - xxxx</time>
+                <ul id="workTasks">
+                   
                 </ul>
             </div>
         </div>
