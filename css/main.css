@@ -102,7 +102,6 @@ main {
 .card-links {
     display: flex;
     justify-content: center;
-
 }
 
 .card-link {
@@ -113,18 +112,17 @@ main {
     border-radius: .5em;
     text-align: center;
     background-color: var(--shadow-color);
-   
 }
-.card-link:hover {
 
+.card-link:hover {
     transform: scale(1.2);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     transition-duration: 1s;
-} 
+}
+
 .icon {
     font-size: 2em;
     color: var(--secondary-color);
-    
 }
 
 /*------- Responsive Design/Media Queries -------*/
@@ -140,17 +138,14 @@ main {
     .main-button {
         margin: 1em;
     }
+
     .card {
-       
         min-width: 25em;
         height: 40em;
-      
     }
-    
+
     .card-image {
-    
         height: 30em;
-       
     }
 }
 
@@ -197,43 +192,44 @@ main {
 
 }
 
- @media screen and (max-width: 768px) {
-   
+@media screen and (max-width: 768px) {
+
     .card {
         min-width: 21em;
         height: 35em;
     }
-    
+
     .card-image {
-        
         height: 25em;
-       
     }
-    
+
     .hero-text {
         margin: 1.5em 0;
         font-size: 1.8em;
     }
+
     .main-button {
         padding: .6em 1.4em;
         margin: .5em;
         font-size: 1.4em;
     }
+
     .x4Text {
         font-size: 3em;
     }
+
     .stats-text {
         font-size: 1rem;
-        
     }
-} 
- @media screen and (max-width: 480px) {
-   
+}
+
+@media screen and (max-width: 480px) {
+
     .hi-text {
         margin: 1em auto;
         font-size: 2.5em;
     }
-    
+
     .hero-text {
         font-size: 1.6em;
     }
@@ -242,7 +238,7 @@ main {
         min-width: 15em;
         height: 25em;
     }
-    
+
     .card-image {
         height: 20em;
     }
@@ -250,22 +246,24 @@ main {
     .card-heading {
         font-size: 1.5em;
     }
-    
+
     .card-subheading {
         font-size: 1em;
     }
+
     .card-link {
         margin: .2em;
         padding: .2em;
-      
         width: 2.5em;
         height: 2.5em;
     }
+
     .x4Text {
         font-size: 2em;
     }
+
     .stats-item {
         padding: 0 .5em;
         margin: 0 .5em;
     }
-} 
+}
