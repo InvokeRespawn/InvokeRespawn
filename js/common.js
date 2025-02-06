@@ -1,5 +1,5 @@
 // Variables 
-let hamburgerExpanded = false;
+var hamburgerExpanded = false;
 var nav, logo, topNav, resumeBtn;
 var topline, middle, bottom;
 var reponsiveclassName = "responsive";

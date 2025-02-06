@@ -1,0 +1,29 @@
+#work {
+    margin: auto;
+    width: 80%;;
+}
+.work-heading {
+    font-size: 3em;
+    margin: 1em auto;
+}
+
+.company-list {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.company-item {
+    padding: 1em;
+    border-left: 2px solid var(--primary-text-color);
+}
+
+.main-work {
+    display: flex;
+    margin: 2em 0;
+}
+
+.work-tasks {
+    flex-direction: column;
+    list-style-type:disc;
+}

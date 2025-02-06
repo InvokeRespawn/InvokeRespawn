@@ -7,6 +7,7 @@
     --primary-bg-color: #ffffff;
     --secondary-bg-color: #ffffff;
     --shadow-color: #0000001a;
+    --scroll-progress: 301.6;
 }
 
 * {
@@ -146,6 +147,52 @@ footer {
 .copy-right {
     text-align: center;
 }
+
+/*------- Scroll Button -------*/
+#scrollBtnCtn {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    right: 20px;
+    bottom: -100px;
+    transform: translateY(0);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+#scrollBtnCtn.slideInBottom {
+    bottom: 20px;
+    opacity: 1;
+}
+
+#scrollToTop {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.scrollRing {
+    transform: rotate(-90deg);
+    pointer-events: none;
+}
+
+#scrollProgress {
+    fill: none;
+    stroke: black;
+    stroke-width: 4;
+    stroke-dasharray: 301.6;
+    stroke-dashoffset: var(--scroll-progress);
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+
+
 /*------- Responsive Design/Media Queries -------*/
 @media screen and (max-width: 1400px) {
     #topNav {
