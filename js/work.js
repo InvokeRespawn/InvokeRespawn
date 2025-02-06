@@ -3,10 +3,15 @@ var workJson;
 
 document.addEventListener("DOMContentLoaded", async (event) => {
 
-// workJson = await  loadJSON("http://127.0.0.1:3000/json/WorkData.json");
-workJson = await  loadJSON("../InvokeRespawn/json/WorkData.json");
-// workJson = await  loadJSON("https://drive.google.com/file/d/1rh1u-0Zt18BE4ZmNOcrNpEy-vmScpfk9/view?usp=sharing");
-    processData(workJson);
+
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.hostname === "::1") {
+     workJson = await  loadJSON("http://127.0.0.1:3000/json/WorkData.json");
+    console.log("Running on localhost");
+} else {
+    console.log("Running on a live website");
+    workJson = await  loadJSON("../InvokeRespawn/json/WorkData.json");
+}
+processData(workJson);
     
 });
 
