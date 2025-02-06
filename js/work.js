@@ -4,7 +4,8 @@ var workJson;
 document.addEventListener("DOMContentLoaded", async (event) => {
 
 // workJson = await  loadJSON("http://127.0.0.1:3000/json/WorkData.json");
-workJson = await  loadJSON("https://drive.google.com/file/d/1rh1u-0Zt18BE4ZmNOcrNpEy-vmScpfk9/view?usp=sharing");
+workJson = await  loadJSON("../json/WorkData.json");
+// workJson = await  loadJSON("https://drive.google.com/file/d/1rh1u-0Zt18BE4ZmNOcrNpEy-vmScpfk9/view?usp=sharing");
     processData(workJson);
     
 });
