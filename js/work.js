@@ -30,7 +30,7 @@ async function loadJSON(url) {
 
 function processData(data) {
     if (data) {
-        console.log("Processing JSON Data:", data);
+       
         const companyListElement = document.getElementById('company-list');
         const TitleCompanyName = document.getElementById('TitleCompanyName');
         const currentCompany = document.getElementById('currentCompany');
