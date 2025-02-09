@@ -4,15 +4,15 @@ var workJson;
 document.addEventListener("DOMContentLoaded", async (event) => {
 
 
-if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.hostname === "::1") {
-     workJson = await  loadJSON("http://127.0.0.1:3000/json/WorkData.json");
-    console.log("Running on localhost");
-} else {
-    console.log("Running on a live website");
-    workJson = await  loadJSON("../InvokeRespawn/json/WorkData.json");
-}
-processData(workJson);
-    
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.hostname === "::1") {
+        workJson = await loadJSON("http://127.0.0.1:3000/json/WorkData.json");
+        console.log("Running on localhost");
+    } else {
+        console.log("Running on a live website");
+        workJson = await loadJSON("../InvokeRespawn/json/WorkData.json");
+    }
+    processData(workJson);
+
 });
 
 async function loadJSON(url) {
@@ -30,15 +30,15 @@ async function loadJSON(url) {
 
 function processData(data) {
     if (data) {
-       
+
         const companyListElement = document.getElementById('company-list');
         const TitleCompanyName = document.getElementById('TitleCompanyName');
         const currentCompany = document.getElementById('currentCompany');
         const companyYear = document.getElementById('companyYear');
 
-       
+
         const workTasks = document.getElementById('workTasks');
-        var activeCompanyName="";
+        var refrenceElement;
         var firstItem = true;
         workJson.forEach(item => {
 
@@ -51,74 +51,63 @@ function processData(data) {
             buttonElement.classList.add('company-item');
             if (firstItem) {
                 firstItem = false;
-                // liElement.classList.add('company-item');
-                activeCompanyName =item.companyName;
-
+                buttonElement.classList.add('highlightCompany');
+                refrenceElement =buttonElement;
             }
             liElement.appendChild(buttonElement);
             companyListElement.appendChild(liElement);
 
-            currentCompany.textContent = item.jobTitle;
-            TitleCompanyName.textContent = " @ "+item.companyName;
-            companyYear.textContent = item.workDuration;
-
           
-        if(activeCompanyName == item.companyName)
-        {
-            item.jobResponsibilities.forEach(subItem => {
-              const stackSubElement = document.createElement('li');
-               // stackSubElement.classList.add('company-item');
-               stackSubElement.textContent = subItem;
-               workTasks.appendChild(stackSubElement);
-            });
-        }
-
-
-       
         });
+        OnClickCompany(refrenceElement);
     } else {
         console.log("No data to process.");
     }
 }
 
 
-function OnClickCompany(element)
-{
-   
-    var activeCompanyName="";
+function OnClickCompany(element) {
+
+    var activeCompanyName = "";
     activeCompanyName = element.textContent;
     const workTasks = document.getElementById('workTasks');
-    
+    var companyItems = Array.from(document.getElementsByClassName('company-item'));
+
+    companyItems.forEach(_element => {
+
+        _element.classList.remove("highlightCompany");
+    });
+
+    element.classList.add('highlightCompany');
+
     while (workTasks.firstChild) {
         workTasks.removeChild(workTasks.firstChild);
-      }
+    }
 
-      const TitleCompanyName = document.getElementById('TitleCompanyName');
-        const currentCompany = document.getElementById('currentCompany');
-        const companyYear = document.getElementById('companyYear');
+    const TitleCompanyName = document.getElementById('TitleCompanyName');
+    const currentCompany = document.getElementById('currentCompany');
+    const companyYear = document.getElementById('companyYear');
     workJson.forEach(item => {
 
 
-    if(activeCompanyName == item.companyName)
-    {
-        currentCompany.textContent = item.jobTitle;
-        TitleCompanyName.textContent = " @ "+item.companyName;
-        companyYear.textContent = item.workDuration;
+        if (activeCompanyName == item.companyName) {
+            currentCompany.textContent = item.jobTitle;
+            TitleCompanyName.textContent = " @ " + item.companyName;
+            companyYear.textContent = item.workDuration;
 
-        item.jobResponsibilities.forEach(subItem => {
-          const stackSubElement = document.createElement('li');
-           // stackSubElement.classList.add('company-item');
-           stackSubElement.textContent = subItem;
-           workTasks.appendChild(stackSubElement);
-        });
-    }
+            item.jobResponsibilities.forEach(subItem => {
+                const stackSubElement = document.createElement('li');
+                 stackSubElement.classList.add('workDetails');
+                stackSubElement.textContent = subItem;
+                workTasks.appendChild(stackSubElement);
+            });
+        }
     });
 }
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
 
-    if(event.target.classList.contains("company-item"))
-    {
+    if (event.target.classList.contains("company-item")) {
         OnClickCompany(event.target);
     }
 });

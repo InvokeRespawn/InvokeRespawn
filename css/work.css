@@ -6,17 +6,29 @@
 
 #work {
     margin: auto;
+    margin-bottom: 5em;
     width: 80%;
 }
+
 .work-heading {
+    display: inline-block;
     font-size: 3em;
-    margin: 1em auto;
+
+
 }
 
+.workLine {
+    width: 50%;
+    height: .2em;
+    background-color: var(--primary-color);
+    border-width: 0;
+}
 
 .company-item {
-    padding: 1em;
-    border-left: 2px solid var(--primary-text-color);
+    padding: 1.5em 2em;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-left: 4px solid var(--primary-text-color);
 }
 
 .main-work {
@@ -26,5 +38,128 @@
 
 #workTasks {
     flex-direction: column;
-    list-style-type:disc;
+    list-style-type: disc;
 }
+
+.highlightCompany {
+
+    color: var(--primary-bg-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-bg-color);
+    border-color: var(--primary-color);
+}
+
+.CompanyDetails {
+    padding-left: 1em;
+}
+
+#currentCompany,
+#TitleCompanyName {
+    display: inline-block;
+    font-size: 2.5em;
+}
+
+#companyYear {
+    display: block;
+    margin: .2em 1em 1em 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.workDetails {
+    font-size: 1.3em;
+    margin: .2em 1em .2em 2em;
+}
+
+.workHead {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    align-items: baseline;
+}
+
+.knowMore {
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.knowMore:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1008px) {
+    #company-list {
+        flex-direction: row;
+        width: 100%;
+        overflow: auto;
+        white-space: nowrap;
+    }
+   
+    .main-work {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CompanyDetails {
+        margin: 2em auto;
+    }
+
+    .company-item {
+        padding: 1em;
+        margin-right: 1em;
+    }
+
+    .workLine {
+        width: 100%;
+    }
+
+    .work-heading {
+        font-size: 2.5em;
+    }
+
+    .knowMore {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #currentCompany,
+    #TitleCompanyName {
+        font-size: 1.5em;
+    }
+
+    .work-heading {
+        font-size: 2em;
+    }
+
+    .knowMore {
+        font-size: .8em;
+    }
+
+    .company-item {
+        padding: .5em;
+        margin-right: .5em;
+        font-size: 1em;
+    }
+
+    .workDetails {
+        margin: .1em 1em .1em 2em;
+        font-size: 1.1em;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .workHead {
+        flex-direction: column;
+    }
+    
+    .knowMore {
+        margin: auto;
+        margin-right: 0;
+    }
+}
+

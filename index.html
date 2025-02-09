@@ -28,7 +28,7 @@
             <li class="nav-item"><button onclick="navItemClick()"><a href="#aboutMe">About me</a></button></li>
             <li class="nav-item"><button onclick="navItemClick()"><a href="#contactMe">Contact me</a></button></li>
         </ul>
-        <button id="btn-resume" class="common-btn" onclick="resumeClick()">Resume<span></span></button>
+        <button id="btn-resume" class="common-btn" onclick="resumeClick()">Resume<span class="bi-link-45deg"></span></button>
         <button id="hamburger" onclick="hamburgerClick()" aria-controls="nav" aria-expanded="false">
             <div class="line" id="topline"></div>
             <div class="line" id="middle"></div>
@@ -44,8 +44,8 @@
                 I specialize in developing engaging gameplay mechanics, implementing dynamic game design patterns, and
                 optimizing player interactions.</p>
             <div>
-                <button class="common-btn main-button">Hire me</button>
-                <button class="common-btn main-button" onclick="resumeClick()">Download CV</button>
+                <button class="common-btn main-button" onclick="hiremeClick()"><span class="bi-envelope-at"></span> Hire me</button>
+                <button class="common-btn main-button" onclick="resumeClick()">Download CV <span class="bi-link-45deg"></span></button>
             </div>
             <div class="stats">
                 <div class="stats-item">
@@ -84,12 +84,16 @@
     </main>
 
     <section id="work">
-        <h1 class="work-heading"><span class="primary-color">01.</span> Where I've Worked <span></span></h1>
+        <div class="workHead">
+            <h1 class="work-heading"><span class="primary-color">01.</span> Where I've Worked <span></span></h1>
+            <a href="work.html" target="_blank" class="knowMore">Know More <span class="bi-chevron-double-right"></span></a>
+        </div>
+        <hr class="workLine">
         <div class="main-work">
             <ul id="company-list">
                 
             </ul>
-            <div>
+            <div class="CompanyDetails">
                 <h2 id="currentCompany">Sample Title </h2>
                 <h2 id="TitleCompanyName" class="primary-color">@ Company Name</h2>
                 <time id="companyYear">xxxx - xxxx</time>

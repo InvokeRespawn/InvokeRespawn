@@ -69,7 +69,13 @@ function navItemClick() {
 function resumeClick() {
     window.open("https://drive.google.com/file/d/1BqGtm5eXPWk0H__LZylQf5uW0lhuiz2S/view?usp=sharing");
 }
-
+function hiremeClick()
+{
+    const section = document.getElementById("contactMe");
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+    }
+}
 //Functions
 function addResponsiveClass() {
     nav.classList.add(reponsiveclassName);
