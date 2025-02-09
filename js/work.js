@@ -40,7 +40,7 @@ function processData(data) {
         const workTasks = document.getElementById('workTasks');
         var refrenceElement;
         var firstItem = true;
-        workJson.forEach(item => {
+        data.forEach(item => {
 
             // Create a time element
             const liElement = document.createElement('li');
