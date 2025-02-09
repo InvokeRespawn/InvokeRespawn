@@ -1,0 +1,40 @@
+[
+  {
+    "Title": "Name of / Title of Blog",
+    "Thumbnail": "ulr of Thumbnail",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repudiandae animi ullam quo laudantium quibusdam totam rem minus natus, cumque illum dignissimos ipsam repellat impedit voluptas iusto nostrum. Repellendus, amet!",
+    "Details": [
+      {
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repudiandae animi ullam quo laudantium quibusdam totam rem minus natus, cumque illum dignissimos ipsam repellat impedit voluptas iusto nostrum. Repellendus, amet!",
+        "adjPic": ""
+      },
+      {
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repudiandae animi ullam quo laudantium quibusdam totam rem minus natus, cumque illum dignissimos ipsam repellat impedit voluptas iusto nostrum. Repellendus, amet!",
+        "adjPic": ""
+      },
+      {
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repudiandae animi ullam quo laudantium quibusdam totam rem minus natus, cumque illum dignissimos ipsam repellat impedit voluptas iusto nostrum. Repellendus, amet!",
+        "adjPic": ""
+      }
+    ]
+  },
+  {
+    "Title": "Name of / Title of Blog",
+    "Thumbnail": "ulr of Thumbnail",
+    "Description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repudiandae animi ullam quo laudantium quibusdam totam rem minus natus, cumque illum dignissimos ipsam repellat impedit voluptas iusto nostrum. Repellendus, amet!",
+    "Details": [
+      {
+        "para": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repudiandae animi ullam quo laudantium quibusdam totam rem minus natus, cumque illum dignissimos ipsam repellat impedit voluptas iusto nostrum. Repellendus, amet!",
+        "adjPic": ""
+      },
+      {
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repudiandae animi ullam quo laudantium quibusdam totam rem minus natus, cumque illum dignissimos ipsam repellat impedit voluptas iusto nostrum. Repellendus, amet!",
+        "adjPic": ""
+      },
+      {
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repudiandae animi ullam quo laudantium quibusdam totam rem minus natus, cumque illum dignissimos ipsam repellat impedit voluptas iusto nostrum. Repellendus, amet!",
+        "adjPic": ""
+      }
+    ]
+  }
+]

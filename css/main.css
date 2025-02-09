@@ -253,7 +253,7 @@ main {
 
     .card-link {
         margin: .2em;
-        padding: .2em;
+        padding: .5em;
         width: 2.5em;
         height: 2.5em;
     }
@@ -266,4 +266,8 @@ main {
         padding: 0 .5em;
         margin: 0 .5em;
     }
+    .icon {
+        font-size: 1.4em;
+    }
+    
 }

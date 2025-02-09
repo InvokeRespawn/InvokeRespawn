@@ -13,8 +13,6 @@
 .work-heading {
     display: inline-block;
     font-size: 3em;
-
-
 }
 
 .workLine {
@@ -95,7 +93,8 @@
         width: 100%;
         overflow: auto;
         white-space: nowrap;
-    }
+        
+     }
    
     .main-work {
         display: flex;
