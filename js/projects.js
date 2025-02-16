@@ -31,66 +31,91 @@ function processDesignData(data) {
     if (data) {
 
         const designList = document.getElementById('designList');
-       
+const maxCount=12;
+var currentCount=0;
         data.forEach(item => {
-
+            currentCount++;
+           
+            if(currentCount>maxCount)
+            {
+                return;
+            }
             const buttonElement = document.createElement('button');
             const imgElement = document.createElement('img');
-            
+
             buttonElement.classList.add("box");
             buttonElement.classList.add(item.Category);
             imgElement.classList.add("boxImage");
-            imgElement.src =item.Thumbnail;
+            imgElement.src = item.Thumbnail;
             buttonElement.appendChild(imgElement);
             designList.appendChild(buttonElement);
+            
 
-          
         });
-        // OnClickCompany(refrenceElement);
+        LoadAndAssignElements();
     } else {
         console.log("No data to process.");
     }
 }
+var illustrationElements, levelDesignElements, modellingElements;
 
+function LoadAndAssignElements() {
+    illustrationElements = Array.from(document.getElementsByClassName("illustration"));
+    levelDesignElements = Array.from(document.getElementsByClassName("levelDesign"));
+    modellingElements = Array.from(document.getElementsByClassName("modelling"));
+}
 
-// function OnClickCompany(element) {
+function ProjectDesignButton(element) {
 
-//     var activeCompanyName = "";
-//     activeCompanyName = element.textContent;
-//     const workTasks = document.getElementById('workTasks');
-//     var companyItems = Array.from(document.getElementsByClassName('company-item'));
+    console.log(element.id);
+    switch (element.id) {
+        case "all":
+            illustrationElements.forEach(element => {
+                element.classList.remove("hidden")
+            });
+            levelDesignElements.forEach(element => {
+                element.classList.remove("hidden")
+            });
+            modellingElements.forEach(element => {
+                element.classList.remove("hidden");
+            });
+            break;
+        case "illustrate":
+            illustrationElements.forEach(element => {
+                element.classList.remove("hidden")
+            });
+            levelDesignElements.forEach(element => {
+                element.classList.add("hidden")
+            });
+            modellingElements.forEach(element => {
+                element.classList.add("hidden");
+            });
+            break;
+        case "design":
+            illustrationElements.forEach(element => {
+                element.classList.add("hidden")
+            });
+            levelDesignElements.forEach(element => {
+                element.classList.remove("hidden")
+            });
+            modellingElements.forEach(element => {
+                element.classList.add("hidden");
+            });
+            break;
+        case "mod":
+            illustrationElements.forEach(element => {
+                element.classList.add("hidden")
+            });
+            levelDesignElements.forEach(element => {
+                element.classList.add("hidden")
+            });
+            modellingElements.forEach(element => {
+                element.classList.remove("hidden");
+            });
+            break;
 
-//     companyItems.forEach(_element => {
-
-//         _element.classList.remove("highlightCompany");
-//     });
-
-//     element.classList.add('highlightCompany');
-
-//     while (workTasks.firstChild) {
-//         workTasks.removeChild(workTasks.firstChild);
-//     }
-
-//     const TitleCompanyName = document.getElementById('TitleCompanyName');
-//     const currentCompany = document.getElementById('currentCompany');
-//     const companyYear = document.getElementById('companyYear');
-//     workJson.forEach(item => {
-
-
-//         if (activeCompanyName == item.companyName) {
-//             currentCompany.textContent = item.jobTitle;
-//             TitleCompanyName.textContent = " @ " + item.companyName;
-//             companyYear.textContent = item.workDuration;
-
-//             item.jobResponsibilities.forEach(subItem => {
-//                 const stackSubElement = document.createElement('li');
-//                  stackSubElement.classList.add('workDetails');
-//                 stackSubElement.textContent = subItem;
-//                 workTasks.appendChild(stackSubElement);
-//             });
-//         }
-//     });
-// }
+    }
+}
 
 // document.addEventListener("click", function (event) {
 

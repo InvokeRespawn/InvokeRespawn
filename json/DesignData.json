@@ -1,7 +1,7 @@
 [
     {
         "Category": "illustration",
-        "Thumbnail": "ulr of Thumbnail",
+        "Thumbnail": "../img/thumbnail_1.png",
         "Images":[
             "ulr of iamge 1",
             "url of image 2"
@@ -9,7 +9,7 @@
     },
     {
         "Category": "illustration",
-        "Thumbnail": "ulr of Thumbnail",
+        "Thumbnail": "../img/thumbnail_2.png",
         "Images":[
             "ulr of iamge 1",
             "url of image 2"
@@ -17,18 +17,83 @@
     },
     {
         "Category": "illustration",
-        "Thumbnail": "ulr of Thumbnail",
+        "Thumbnail": "../img/thumbnail_3.png",
         "Images":[
             "ulr of iamge 1",
             "url of image 2"
         ]
-    }
-    , {
+    }, 
+    {
         "Category": "illustration",
-        "Thumbnail": "ulr of Thumbnail",
+        "Thumbnail": "../img/thumbnail_4.png",
+        "Images":[
+            "ulr of iamge 1",
+            "url of image 2"
+        ]
+    },
+    {
+        "Category": "levelDesign",
+        "Thumbnail": "../img/thumbnail_5.png",
+        "Images":[
+            "ulr of iamge 1",
+            "url of image 2"
+        ]
+    },
+    {
+        "Category": "levelDesign",
+        "Thumbnail": "./img/thumbnail_6.png",
+        "Images":[
+            "ulr of iamge 1",
+            "url of image 2"
+        ]
+    },
+    {
+        "Category": "levelDesign",
+        "Thumbnail": "./img/thumbnail_7.png",
+        "Images":[
+            "ulr of iamge 1",
+            "url of image 2"
+        ]
+    }, 
+    {
+        "Category": "levelDesign",
+        "Thumbnail": "./img/thumbnail_8.png",
+        "Images":[
+            "ulr of iamge 1",
+            "url of image 2"
+        ]
+    },
+    {
+        "Category": "modelling",
+        "Thumbnail": "../img/thumbnail_9.png",
+        "Images":[
+            "ulr of iamge 1",
+            "url of image 2"
+        ]
+    },
+    {
+        "Category": "modelling",
+        "Thumbnail": "../img/thumbnail_10.png",
+        "Images":[
+            "ulr of iamge 1",
+            "url of image 2"
+        ]
+    },
+    {
+        "Category": "modelling",
+        "Thumbnail": "../img/thumbnail_11.png",
+        "Images":[
+            "ulr of iamge 1",
+            "url of image 2"
+        ]
+    }, 
+    {
+        "Category": "modelling",
+        "Thumbnail": "../img/thumbnail_12.png",
         "Images":[
             "ulr of iamge 1",
             "url of image 2"
         ]
     }
+    
 ]

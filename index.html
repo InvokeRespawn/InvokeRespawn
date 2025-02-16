@@ -72,7 +72,7 @@
         </div>
         <div class="hero-image">
             <div class="card">
-                <img class="card-image" alt="">
+                <div class="card-image"><img src="../img/hero-image.png" alt=""></div>
                 <div>
                     <h1 class="card-heading primary-color">Sagar Kumar</h1>
                     <h2 class="card-subheading">Unity Developer</h2>
@@ -123,17 +123,20 @@
         <div id="designs">
             <h2><span class="primary-color">2.3 </span>Designs</h2>
             <ul>
-                <li><button>All</button></li>
-                <li><button>Illustration</button></li>
-                <li><button>Level Design</button></li>
-                <li><button>Modelling</button></li>
+                <li><button id="all" onclick="ProjectDesignButton(this)">All</button></li>
+                <li><button id="illustrate" onclick="ProjectDesignButton(this)">Illustration</button></li>
+                <li><button id="design" onclick="ProjectDesignButton(this)">Level Design</button></li>
+                <li><button id="mod" onclick="ProjectDesignButton(this)">Modelling</button></li>
             </ul>
             <div>
                 <div id="designList">
-                    
+
                 </div>
             </div>
         </div>
+        <template>
+            
+        </template>
     </section>
 
 
